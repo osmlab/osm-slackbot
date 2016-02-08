@@ -1,0 +1,91 @@
+SLACK_MESSAGE_TEMPLATE_PROJECT:
+  attachments:
+    - title: "{title}"
+      title_link: "{url_view}"
+      fallback: "HOT Project {project} is {percent}% done, based on task counts: {count_ready} ready, {count_invalidated} invalidated, {count_done} done, {count_validated} validated, {count_removed} removed."
+      text:  "HOT Project <{url_view}|{project}> is *{percent}%* done, based on task counts: *{count_ready}* ready, *{count_invalidated}* invalidated, *{count_done}* done, *{count_validated}* validated, *{count_removed}* removed."
+      color: "#000099"
+      "mrkdwn_in": ["text", "pretext"]
+      fields:
+        - title: "View Project"
+          value: "<{url_view}|View>"
+          short: true
+        - title: "Edit Project Settings"
+          value: "<{url_edit}|Edit>"
+          short: true
+        - title: "Download GeoJSON of Tasks"
+          value: "<{url_tasks}|Download>"
+          short: True
+
+SLACK_MESSAGE_TEMPLATE_CHANGESET:
+  attachments:
+    - title: "{title}"
+      title_link: "{url_changeset_view}"
+      fallback: "OSM Changeset {changeset} was completed by {user} at {date}.  It was based on imagery from {imagery}.  User added the following comment: {comment}"
+      text:  "OSM Changeset <{url_changeset_view}|{changeset}> was completed by <{url_user_view}|{user}> at *{date}*.  It was based on imagery from *{imagery}*.  User added the following comment: _{comment}_"
+      color: "#000099"
+      "mrkdwn_in": ["text", "pretext"]
+      fields:
+        - title: "View Changeset"
+          value: "<{url_changeset_view}|View>"
+          short: true
+        - title: "View User"
+          value: "<{url_user_view}|View>"
+          short: true
+
+SLACK_MESSAGE_TEMPLATE_NODE:
+  attachments:
+    - title: "{title}"
+      title_link: "{url_node_view}"
+      fallback: "OSM Node {node} ({name}) at ({lat} {lon}) was last edited by {user} at {date} as part of changeset {changeset}."
+      text:  "OSM Node <{url_node_view}|{node}> _{name}_ at *({lat} {lon})* was last edited by <{url_user_view}|{user}> at *{date}* as part of changeset <{url_changeset_view}|{changeset}>."
+      color: "#000099"
+      "mrkdwn_in": ["text", "pretext"]
+      fields:
+        - title: "View Node"
+          value: "<{url_node_view}|View>"
+          short: true
+        - title: "View Changeset"
+          value: "<{url_changeset_view}|View>"
+          short: true
+        - title: "View User"
+          value: "<{url_user_view}|View>"
+          short: true
+
+SLACK_MESSAGE_TEMPLATE_WAY:
+  attachments:
+    - title: "{title}"
+      title_link: "{url_way_view}"
+      fallback: "OSM Way {way} ({name}) was last edited by {user} at {date} as part of changeset {changeset}."
+      text:  "OSM Way <{url_way_view}|{way}> _{name}_ was last edited by <{url_user_view}|{user}> at *{date}* as part of changeset <{url_changeset_view}|{changeset}>."
+      color: "#000099"
+      "mrkdwn_in": ["text", "pretext"]
+      fields:
+        - title: "View Way"
+          value: "<{url_way_view}|View>"
+          short: true
+        - title: "View Changeset"
+          value: "<{url_changeset_view}|View>"
+          short: true
+        - title: "View User"
+          value: "<{url_user_view}|View>"
+          short: true
+
+SLACK_MESSAGE_TEMPLATE_RELATION:
+  attachments:
+    - title: "{title}"
+      title_link: "{url_relation_view}"
+      fallback: "OSM Relation {relation} ({name}) was last edited by {user} at {date} as part of changeset {changeset}."
+      text:  "OSM Relation <{url_relation_view}|{relation}> _{name}_ was last edited by <{url_user_view}|{user}> at *{date}* as part of changeset <{url_changeset_view}|{changeset}>."
+      color: "#000099"
+      "mrkdwn_in": ["text", "pretext"]
+      fields:
+        - title: "View Relation"
+          value: "<{url_relation_view}|View>"
+          short: true
+        - title: "View Changeset"
+          value: "<{url_changeset_view}|View>"
+          short: true
+        - title: "View User"
+          value: "<{url_user_view}|View>"
+          short: true

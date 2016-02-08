@@ -1,0 +1,29 @@
+project:
+  - "^([<][@]\\w+[>])(\\s+)(project)(\\s+)(?P<project>\\d+)"
+  - "<(http|https):\\/\\/tasks\\.hotosm.org\\/project\\/(?P<project>\\d+)(\\||>)"
+  - "<(http|https):\\/\\/tasks\\.hotosm.org\\/project\\/(?P<project>\\d+)\\/tasks\\.json(\\||>)"
+
+user:
+  - "^([<][@]\\w+[>])(\\s+)(user)(\\s+)(?P<user>\\d+)"
+  - "<(http|https):\\/\\/openstreetmap\\.org\\/user\\/(?P<user>[\\S\\\\.]+)(\\||>)"
+  - "<(http|https):\\/\\/wiki\\.openstreetmap\\.org\\/wiki\\/User:(?P<user>[\\S\\\\.]+)(\\||>)"
+
+changeset:
+  - "([<][@]\\w+[>])(\\s+)(changeset)(\\s+)(?P<changeset>\\d+)"
+  - "<(http|https):\\/\\/(?:www\\.)openstreetmap\\.org\\/changeset\\/(?P<changeset>\\d+)(\\||>)"
+  - "<(http|https):\\/\\/(?:(api|www)\\.)openstreetmap.org\\/api\\/0.6\\/changeset\\/(?P<changeset>\\d+)(\\||>)"
+
+node:
+  - "([<][@]\\w+[>])(\\s+)(node)(\\s+)(?P<node>\\d+)"
+  - "<(http|https):\\/\\/(?:www\\.)openstreetmap\\.org\\/node\\/(?P<node>\\d+)(\\||>)"
+  - "<(http|https):\\/\\/(?:(api|www)\\.)openstreetmap.org\\/api\\/0.6\\/node\\/(?P<node>\\d+)(\\||>)"
+
+way:
+  - "([<][@]\\w+[>])(\\s+)(way)(\\s+)(?P<way>\\d+)"
+  - "<(http|https):\\/\\/(?:www\\.)openstreetmap\\.org\\/way\\/(?P<way>\\d+)(\\||>)"
+  - "<(http|https):\\/\\/(?:(api|www)\\.)openstreetmap.org\\/api\\/0.6\\/way\\/(?P<way>\\d+)(\\||>)"
+
+relation:
+  - "([<][@]\\w+[>])(\\s+)(relation)(\\s+)(?P<relation>\\d+)"
+  - "<(http|https):\\/\\/(?:www\\.)openstreetmap\\.org\\/relation\\/(?P<relation>\\d+)(\\||>)"
+  - "<(http|https):\\/\\/(?:(api|www)\\.)openstreetmap.org\\/api\\/0.6\\/relation\\/(?P<relation>\\d+)(\\||>)"

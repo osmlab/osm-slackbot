@@ -60,3 +60,10 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+
+# OSM Slack Bot
+supervisord.log
+supervisord.pid
+osmslackbot.log
+osmslackbot/local_settings.py

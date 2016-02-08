@@ -1,0 +1,10 @@
+enabled: true
+name: "Slack Bot for OpenStreetMap"
+description: "This broker responds to commands prefixed with @osm and will sniff OSM urls in Slack channels.  Broker responses go to the channel fo the original message."
+duplex:
+  - backend: slack
+    codec: slack
+    topic: test  # The topic to reply back to.  Broker code overrides this and responds to where the mssage came from.
+    topic_check: false
+    # Slack API doesn't support bot's joining channels automatically.
+    # Need to manualy do /invite @botname in channel UI.

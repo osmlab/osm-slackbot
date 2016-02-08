@@ -1,0 +1,11 @@
+boto3
+geojson
+httplib2
+iso8601
+kafka-python
+python-dateutil
+pymongo
+slackclient
+git+git://github.com/geowatch/geowatch-util@master
+pyyaml
+defusedxml
