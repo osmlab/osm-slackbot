@@ -6,6 +6,7 @@ import defusedxml.ElementTree as et
 from geowatchutil.broker.base import GeoWatchBroker
 from geowatchutil.codec.geowatch_codec_slack import GeoWatchCodecSlack
 
+from osmslackbot import settings
 from osmslackbot.enumerations import *  # noqa
 from osmslackbot.mapping.base import *  # noqa
 from osmslackbot.utils import load_patterns
@@ -64,6 +65,15 @@ class OSMSlackBotBroker(GeoWatchBroker):
                     # user = m[u'user']
                     text = m[u'text']
                     channel = m[u'channel']
+
+                    stop = False
+                    for stopword in settings.GEOWATCH_STOPWORDS:
+                        if stopword in text:
+                            stop = True
+                            break
+
+                    if stop:
+                        continue
 
                     match_question = None
                     match_value = None

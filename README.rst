@@ -54,6 +54,22 @@ want it to watch.
 Then, follow the instructions on the osm-slackbot-ansible_ repo
 to provision a virtual machine within minutes.
 
+**Stop Words**
+
+Once a bot is invited into a channel, it will, by default, process and respond to
+each message when applicable.  To permanently stop the bot from responding,
+/kick the bot from the channel or stop the bot on the server-side.
+
+If you want to disable the bot temporarily for a specific message, just add a
+stop word to the message.  Stop words signal to the bot to not process the message
+and just continue.  Stop words can be configured in the osm-slackbot-ansible_
+repo.
+
+.. _osm-slackbot-ansible: https://github.com/osmlab/osm-slackbot-ansible
+
+The default stopwords are: nobot, no bot, stopbot, stop bot, ignorebot,
+ignore bot, skipbot, skip bot, !bot, and -bot.
+
 Contributing
 ------------
 
